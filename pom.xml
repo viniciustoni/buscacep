@@ -11,6 +11,18 @@
 			<email>viniciustoni@gmail.com</email>
 		</developer>
 	</developers>
+
+	<properties>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+	</properties>
+
+<scm>
+        <connection>scm:git:https://github.com/viniciustoni/buscacep.git</connection>
+        <developerConnection>scm:git:https://github.com/viniciustoni/buscacep.git</developerConnection>
+        <url>https://github.com/viniciustoni/buscacep.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -35,15 +47,10 @@
 			<plugin>
 				<groupId>external.atlassian.jgitflow</groupId>
 				<artifactId>jgitflow-maven-plugin</artifactId>
-				<version>1.0-m5.1</version> 
+				<version>1.0-m5.1</version>
 				<configuration>
-					<enableSshAgent>true</enableSshAgent>
-					<autoVersionSubmodules>true</autoVersionSubmodules>
-					<pushFeatures>true</pushFeatures>
-					<pushReleases>true</pushReleases>
-					<pushHotfixes>true</pushHotfixes>
-					<noDeploy>true</noDeploy>
-				</configuration>
+                    <noDeploy>true</noDeploy>
+                </configuration>
 			</plugin>
 		</plugins>
 		<finalName>buscacep</finalName>

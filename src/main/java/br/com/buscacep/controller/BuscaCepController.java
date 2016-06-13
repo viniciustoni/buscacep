@@ -59,10 +59,11 @@ public class BuscaCepController {
 	/**
 	 * Busca pelo Cep.
 	 * 
-	 * @param num
+	 * @param numCep
 	 *            Dados do CEP.
-	 * @throws NenhumCepEncontradoException
-	 * @throws CepInvalidoException
+	 * @return {@link CepTO}
+	 * @throws NenhumCepEncontradoException caso nenhum cep for encontrado
+	 * @throws CepInvalidoException Caso o cep informado for invalido
 	 */
 	@RequestMapping(value = "/buscacep/buscaCep/{numCep}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	@ApiOperation(value = "Busca o cep na base de dados", notes = "Busca um cep na base de dados.")

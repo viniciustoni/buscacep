@@ -1,9 +1,8 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.buscacep</groupId>
 	<artifactId>buscacep</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>buscacep</name>
 	<description>Serviços REST para busca de cep.</description>
 	<developers>
@@ -12,6 +11,18 @@
 			<email>viniciustoni@gmail.com</email>
 		</developer>
 	</developers>
+
+	<properties>
+		<maven.javadoc.skip>true</maven.javadoc.skip>
+	</properties>
+
+<scm>
+        <connection>scm:git:https://github.com/viniciustoni/buscacep.git</connection>
+        <developerConnection>scm:git:https://github.com/viniciustoni/buscacep.git</developerConnection>
+        <url>https://github.com/viniciustoni/buscacep.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -32,6 +43,14 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m5.1</version>
+				<configuration>
+                    <noDeploy>true</noDeploy>
+                </configuration>
 			</plugin>
 		</plugins>
 		<finalName>buscacep</finalName>

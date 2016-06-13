@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>br.com.buscacep</groupId>
 	<artifactId>buscacep</artifactId>
-	<version>1.0.1</version>
+	<version>1.1</version>
 	<name>buscacep</name>
 	<description>Serviços REST para busca de cep.</description>
 	<developers>

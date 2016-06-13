@@ -16,6 +16,13 @@
 		<maven.javadoc.skip>true</maven.javadoc.skip>
 	</properties>
 
+<scm>
+        <connection>scm:git:https://github.com/viniciustoni/buscacep.git</connection>
+        <developerConnection>scm:git:https://github.com/viniciustoni/buscacep.git</developerConnection>
+        <url>https://github.com/viniciustoni/buscacep.git</url>
+        <tag>HEAD</tag>
+    </scm>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -41,6 +48,9 @@
 				<groupId>external.atlassian.jgitflow</groupId>
 				<artifactId>jgitflow-maven-plugin</artifactId>
 				<version>1.0-m5.1</version>
+				<configuration>
+                    <noDeploy>true</noDeploy>
+                </configuration>
 			</plugin>
 		</plugins>
 		<finalName>buscacep</finalName>
